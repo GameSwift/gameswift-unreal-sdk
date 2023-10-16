@@ -47,7 +47,7 @@ it up-to-date with newer Unreal Engine releases, including Unreal Engine 5 and u
    fields: `ClientId`, `ClientRedirectUri`, `ClientAuthenticationSecret`. These secrets
    are [distributed by GameSwift](#contact-us).
 
-   ![Plugin secrets](https://github-production-user-asset-6210df.s3.amazonaws.com/109578061/275326695-cad47683-f07a-4d60-a9eb-338e454e6f12.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231015T155030Z&X-Amz-Expires=300&X-Amz-Signature=5f594705cef1e88f03b416a8397762fcc610522672ffb78ce0e0bed12208ef51&X-Amz-SignedHeaders=host&actor_id=109578061&key_id=0&repo_id=704859033)
+   ![Plugin secrets](https://cdn.gameswift.io/gameswift/images/sdk/unreal_sdk/ue_plugin.png)
 3. Add `GameSwiftSdk` to `PublicDependencyModuleNames` in your main `*.Build.cs` file.
 
 # Integration
@@ -102,7 +102,7 @@ void ASampleCharacter::OnError(const FBaseSdkFailResponse& Response)
 `AuthorizeAndReadUserInfoFromLauncher` node is responsible for authorizing the user, who accessed the game through
 GameSwift Launcher.
 
-![Launcher login with Blueprints](https://github-production-user-asset-6210df.s3.amazonaws.com/109578061/275194063-dfb534d1-a6ea-45de-a892-1b60841a6952.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231015T155121Z&X-Amz-Expires=300&X-Amz-Signature=509ef88a05d06069d351a8e471035592768ba0e7475ad8517df11d1ef2ccc674&X-Amz-SignedHeaders=host&actor_id=109578061&key_id=0&repo_id=704859033)
+![Launcher login with Blueprints](https://cdn.gameswift.io/gameswift/images/sdk/unreal_sdk/blueprint_launcher.png)
 
 ## Non-launcher authentication - C++
 
@@ -141,7 +141,7 @@ void ASampleCharacter::OnError(const FBaseSdkFailResponse& Response)
 `GetUserCredentials` node in the sample below is your implementation of retrieving login data from your custom login
 widget. Then, you can pass retrieved data to `LoginAndAuthorize` node.
 
-![Non launcher login with Blueprints](https://github-production-user-asset-6210df.s3.amazonaws.com/109578061/275194061-6bd7b194-49c9-4898-bc49-1fd146baa9d9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231015T155137Z&X-Amz-Expires=300&X-Amz-Signature=d5ed67496752a06bf27352d60840374e60342f77f816ffa71b04fd17bf8100d3&X-Amz-SignedHeaders=host&actor_id=109578061&key_id=0&repo_id=704859033)
+![Non launcher login with Blueprints](https://cdn.gameswift.io/gameswift/images/sdk/unreal_sdk/blueprint_nolauncher.png)
 
 ## Multiple Logins Blocker
 
