@@ -1,6 +1,6 @@
 #pragma once
 #include "BackendResponses.h"
-#include "IHttpRequest.h"
+#include "Interfaces/IHttpRequest.h"
 #include "GameSwiftWalletManager.generated.h"
 
 

@@ -2,7 +2,6 @@
 
 #include "CoreMinimal.h"
 #include "Http.h"
-#include "JsonObject.h"
 
 struct FOAuthUserInfoResponse;
 struct FBaseSdkFailResponse;

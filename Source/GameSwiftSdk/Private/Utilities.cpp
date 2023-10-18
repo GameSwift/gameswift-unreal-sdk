@@ -1,5 +1,5 @@
 #include "Utilities.h"
-#include "GenericPlatformHttp.h"
+#include "GenericPlatform/GenericPlatformHttp.h"
 
 void FUtilities::ReadCommandLineArgument(const char* ArgumentName, FString& ArgumentValue)
 {

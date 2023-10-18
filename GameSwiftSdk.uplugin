@@ -1,7 +1,7 @@
 {
   "FileVersion": 3,
-  "VersionName": "2.0.0",
-  "Version": 200,
+  "VersionName": "2.0.1",
+  "Version": 201,
   "FriendlyName": "GameSwiftUnrealSdk",
   "Description": "GameSwift Unreal SDK is Unity toolset created to integrate with GameSwift ID ecosystem.",
   "Category": "Other",
