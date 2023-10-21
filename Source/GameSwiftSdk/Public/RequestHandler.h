@@ -11,12 +11,17 @@ class FRequestHandler
 {
 public:
 #if ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION <= 24
-	static TSharedRef<IHttpRequest> SendRequest(
+	using HttpRequestRefType = TSharedRef<IHttpRequest>;
 #else
-	static TSharedRef<IHttpRequest, ESPMode::ThreadSafe> SendRequest(
+	using HttpRequestRefType = TSharedRef<IHttpRequest, ESPMode::ThreadSafe>;
 #endif
-		FString FullUrl, FString Method, const FString callBody, const FString accessToken,
-		bool ExpectsWwwResponse = false);
+	static HttpRequestRefType SendRequest(
+		const FString& FullUrl,
+		const FString& Method,
+		const FString& callBody,
+		const FString& accessToken,
+		bool ExpectsWwwResponse = false
+	);
 
 	static bool DecodeRequest(FHttpResponsePtr HttpResponse, bool bSucceeded, FJsonObject& ResultObject,
 	                          FBaseSdkFailResponse& OutError);

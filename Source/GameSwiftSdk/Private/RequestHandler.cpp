@@ -5,12 +5,18 @@
 
 
 #if ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION <= 24
-TSharedRef<IHttpRequest> FRequestHandler::SendRequest(
+	using HttpRequestRef = TSharedRef<IHttpRequest>;
 #else
-TSharedRef<IHttpRequest, ESPMode::ThreadSafe> FRequestHandler::SendRequest(
+	using HttpRequestRef = TSharedRef<IHttpRequest, ESPMode::ThreadSafe>;
 #endif
-	FString FullUrl, FString Method, const FString callBody, const FString accessToken, bool ExpectsWwwResponse)
-{
+
+HttpRequestRef FRequestHandler::SendRequest(
+	FString FullUrl,
+	FString Method,
+	const FString& callBody,
+	const FString& accessToken,
+	bool ExpectsWwwResponse
+) {
 	auto HttpRequest = FHttpModule::Get().CreateRequest();
 	HttpRequest->SetVerb(Method);
 	HttpRequest->SetURL(FullUrl);
